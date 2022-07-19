@@ -44,7 +44,8 @@ double SumAverage(int[,] array)
         {
             sumAverage += (array[i, j]);
         }
-        Console.WriteLine($"Среднее арифметическое суммы элементов столбца {j + 1}: {sumAverage / array.GetLength(0)} ");
+        sumAverage /= array.GetLength(0);
+        Console.WriteLine($"Среднее арифметическое суммы элементов столбца {j + 1}: {Math.Round(sumAverage * 10, 2)} ");
     }
     return sumAverage;
 }
